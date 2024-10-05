@@ -12,14 +12,9 @@ import Saturn from './Saturn';
 import Uranus from './Uranus';
 import Neptune from './Neptune'; 
 
-
+import EarthSurface from './Surface/EarthSurface'; // Import Neptune component
 
 import { useEffect } from 'react';
-
-
-
-
-
 
 function App() {
   useEffect(()=>{
@@ -39,6 +34,9 @@ function App() {
         <Route path="/saturn" element={<Saturn />} />
         <Route path="/uranus" element={<Uranus />} />
         <Route path="/neptune" element={<Neptune />} />
+
+        <Route path="/Surface/EarthSurface" element={<EarthSurface />} />
+
       </Routes>
     </Router>
   );

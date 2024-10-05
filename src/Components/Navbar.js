@@ -33,7 +33,8 @@ const Navbar = () => {
           )}
         </li>
 
-    
+        <li><Link to="/Surface/EarthSurface">Explore Galaxy</Link></li>
+
       </ul>
     </nav>
   );
