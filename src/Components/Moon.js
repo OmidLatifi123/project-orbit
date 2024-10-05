@@ -23,7 +23,7 @@ function MoonModel({ showLabel }) {
       moonTexture.wrapT = THREE.RepeatWrapping;
       moonTexture.repeat.set(1, 1); // No tiling, fit texture exactly once
 
-s
+
       child.material = new THREE.MeshStandardMaterial({
         map: moonTexture,
         roughness: 1,
