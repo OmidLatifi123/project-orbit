@@ -7,7 +7,6 @@ import { EffectComposer, Bloom } from '@react-three/postprocessing';
 import Navbar from './Navbar';
 import '../Components/Styles/App.css';
 
-// Orbit Path Component (white line for the trajectory)
 function OrbitPath({ radius }) {
   const orbitRef = useRef();
 
@@ -31,7 +30,6 @@ function OrbitPath({ radius }) {
   );
 }
 
-// Reusable Planet Component with orbit
 function Planet({ texture, size, distanceFromSun, orbitSpeed, spinSpeed, children, showTrajectory }) {
   const planetRef = useRef();
   const orbitRef = useRef();
@@ -55,7 +53,6 @@ function Planet({ texture, size, distanceFromSun, orbitSpeed, spinSpeed, childre
   );
 }
 
-// Moon Component
 function Moon({ texture, size, distanceFromPlanet, orbitSpeed, spinSpeed }) {
   const moonRef = useRef();
   const orbitRef = useRef();
@@ -77,7 +74,6 @@ function Moon({ texture, size, distanceFromPlanet, orbitSpeed, spinSpeed }) {
   );
 }
 
-// Sun Component
 function Sun({ glow }) {
   const sunTexture = useLoader(THREE.TextureLoader, '/textures/sun.png');
   const sunRef = useRef();
@@ -103,7 +99,6 @@ function Sun({ glow }) {
   );
 }
 
-// Saturn Rings Component
 function SaturnRings({ size }) {
   const ringTexture = useLoader(THREE.TextureLoader, '/textures/saturnRing.png');
   const ringsRef = useRef();
@@ -123,7 +118,6 @@ function SaturnRings({ size }) {
   );
 }
 
-// Galaxy Component
 function Galaxy({ realSize, realDistance, showTrajectory }) {
   const sizeMultiplier = realSize ? 1 : 3;
   const distanceMultiplier = realDistance ? 1 : 0.75;
@@ -200,7 +194,6 @@ function Galaxy({ realSize, realDistance, showTrajectory }) {
   );
 }
 
-// Main Galaxy Scene Component
 function GalaxyScene() {
   const [realSize, setRealSize] = useState(false);
   const [realDistance, setRealDistance] = useState(false);

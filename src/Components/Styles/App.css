@@ -1,4 +1,3 @@
-/* Ensure that the body and html take up the full height of the viewport */
 html, body {
   margin: 0;
   padding: 0;
@@ -8,19 +7,17 @@ html, body {
 
 .earth-objects-container {
   width: 100%;
-  height: 100vh; /* Full viewport height */
+  height: 100vh; 
   display: flex;
   flex-direction: column;
 }
 
-/* Ensure the sun container covers the full screen */
 .sun-container {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
 
-/* Fullscreen canvas */
 canvas {
   display: block;
   width: 100vw;
@@ -28,7 +25,6 @@ canvas {
 }
 
 
-/* Ensure the canvas takes up full space */
 .canvas-background {
   width: 100%;
   height: 100%;
