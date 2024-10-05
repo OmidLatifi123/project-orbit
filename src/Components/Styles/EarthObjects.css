@@ -1,0 +1,52 @@
+/* Ensure that the body and html take up the full height of the viewport */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .earth-objects-container {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Ensure the canvas takes up full space */
+  .canvas-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+  
+  /* Galaxy */
+  .galaxy-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .canvas-background {
+    background-color: #000000;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .galaxy-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .canvas-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+
