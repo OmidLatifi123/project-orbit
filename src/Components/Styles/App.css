@@ -1,0 +1,106 @@
+/* Ensure that the body and html take up the full height of the viewport */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.earth-objects-container {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure the sun container covers the full screen */
+.sun-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Fullscreen canvas */
+canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+/* Ensure the canvas takes up full space */
+.canvas-background {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+
+/* Galaxy */
+.galaxy-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.canvas-background {
+  background-color: #000000;
+  height: 100%;
+  width: 100%;
+}
+
+.galaxy-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.canvas-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* SWITCH */
+.switch-container {
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999;
+}
+
+.switch-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+}
+
+.switch-group label {
+  color: white;
+  font-weight: bold;
+}
+
+.switch-group [role="switch"] {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.switch-group [role="switch"][data-state="checked"] {
+  background-color: #22c55e;
+}
