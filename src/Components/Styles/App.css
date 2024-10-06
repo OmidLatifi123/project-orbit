@@ -1,3 +1,4 @@
+/* Ensure that the body and html take up the full height of the viewport */
 html, body {
   margin: 0;
   padding: 0;
@@ -7,17 +8,19 @@ html, body {
 
 .earth-objects-container {
   width: 100%;
-  height: 100vh; 
+  height: 100vh; /* Full viewport height */
   display: flex;
   flex-direction: column;
 }
 
+/* Ensure the sun container covers the full screen */
 .sun-container {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
 
+/* Fullscreen canvas */
 canvas {
   display: block;
   width: 100vw;
@@ -25,6 +28,7 @@ canvas {
 }
 
 
+/* Ensure the canvas takes up full space */
 .canvas-background {
   width: 100%;
   height: 100%;
@@ -100,3 +104,85 @@ canvas {
 .switch-group [role="switch"][data-state="checked"] {
   background-color: #22c55e;
 }
+
+
+/* Navbar styles remain the same */
+
+.navbar {
+  background-color: rgba(51, 51, 51, 0.9);
+  padding: 10px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.navbar li {
+  position: relative; /* Position needed for dropdowns */
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ffd700;
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: absolute;
+  top: 100%; /* Places dropdown below the parent li */
+  left: 0;
+  background-color: rgba(51, 51, 51, 0.9);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.dropdown a {
+  color: white;
+  padding: 5px 0;
+  text-decoration: none;
+}
+
+.dropdown a:hover {
+  color: #ffd700;
+  background-color: rgba(255, 255, 255, 0.1); /* Slight background change on hover */
+}
+.voicebot{
+  width: 200px;
+  position: absolute;
+  bottom: 42px;
+  right: 400px;
+  border-radius: 10px;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  z-index: 999;
+}
+

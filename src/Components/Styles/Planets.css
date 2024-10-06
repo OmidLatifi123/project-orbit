@@ -1,4 +1,6 @@
-.info-section {
+
+
+  .info-section {
     margin: 50px auto;
     padding: 20px;
     max-width: 800px;
@@ -32,10 +34,10 @@
     scroll-behavior: smooth;
 }
   
-
+/* Ensure the canvas fills the screen */
 canvas {
     display: block;
-    position: relative; 
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -55,9 +57,9 @@ canvas {
 
 .planet-info-overlay {
   background-image: url('../Styles/background.svg');
-  background-position: center; 
+  background-position: center;
   background-size: cover; 
-  background-attachment: fixed; 
+  background-attachment: fixed;
   min-height: 100vh; 
   width: 100vw;
   padding-top: 3%;
@@ -73,7 +75,7 @@ canvas {
     border-radius: 20px;
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    border: 1px solid rgba(255, 255, 255, 0.2); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
   
 .info-section h2 {

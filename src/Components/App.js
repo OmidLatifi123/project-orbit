@@ -1,23 +1,29 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import GalaxyScene from './GalaxyScene';
-import Sun from './Sun';
+import About from './About';
+
+import Sun from './Sun'; 
 import Mercury from './Mercury'; 
 import Venus from './Venus'; 
 import Earth from './Earth'; 
 import Moon from './Moon'; 
 import Mars from './Mars'; 
-import Jupiter from './Jupiter'; 
+import Jupiter from './Jupiter';
 import Saturn from './Saturn'; 
-import Uranus from './Uranus';
+import Uranus from './Uranus'; 
 import Neptune from './Neptune'; 
 
 import EarthSurface from './Surface/EarthSurface'; 
+import OrbitalPropagator from './OrbitalPropagator'; 
 import SpaceshipEarth from './SpaceshipEarth'; 
 
-
 import { useEffect } from 'react';
-import About from './About';
+
+
+
+
+
 
 function App() {
   useEffect(()=>{
@@ -27,6 +33,11 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<GalaxyScene />} />
+
+        <Route path="/about" element={<About />} />
+
+    
+
         <Route path="/sun" element={<Sun />} />
         <Route path="/mercury" element={<Mercury />} />
         <Route path="/venus" element={<Venus />} />
@@ -38,11 +49,12 @@ function App() {
         <Route path="/uranus" element={<Uranus />} />
         <Route path="/neptune" element={<Neptune />} />
 
+        <Route path="/orbitalpropogator" element={<OrbitalPropagator />} />
+        
+      
         <Route path="/Surface/EarthSurface" element={<EarthSurface />} />
 
         <Route path="/SpaceshipEarth" element={<SpaceshipEarth />} />
-
-        <Route path="/aboutus" element={<About/>}></Route>
 
 
       </Routes>

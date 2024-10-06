@@ -4,10 +4,7 @@ import './Styles/Navbar.css'
 
 const Navbar = () => {
   const [homeDropdownOpen, setHomeDropdownOpen] = useState(false);
-
-  const toggleHomeDropdown = () => {
-    setHomeDropdownOpen(!homeDropdownOpen);
-  };
+  const [earthObjectsDropdownOpen, setEarthObjectsDropdownOpen] = useState(false);
 
   return (
     <nav className="navbar">
@@ -32,13 +29,14 @@ const Navbar = () => {
             </div>
           )}
         </li>
-
+       
         <li><Link to="/Surface/EarthSurface">Explore Galaxy</Link></li>
 
         <li><Link to="/SpaceshipEarth">Explore Earth & NEOs</Link></li>
-        <li><Link to="/aboutus">About Us</Link></li>
 
+        <li><Link to="/OrbitalPropogator">Orbital Propagator</Link></li>
 
+        <li><Link to="/about">About</Link></li>
       </ul>
     </nav>
   );
