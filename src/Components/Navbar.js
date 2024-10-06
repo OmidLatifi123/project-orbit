@@ -36,6 +36,7 @@ const Navbar = () => {
         <li><Link to="/Surface/EarthSurface">Explore Galaxy</Link></li>
 
         <li><Link to="/SpaceshipEarth">Explore Earth & NEOs</Link></li>
+        <li><Link to="/aboutus">About Us</Link></li>
 
 
       </ul>

@@ -17,6 +17,7 @@ import SpaceshipEarth from './SpaceshipEarth';
 
 
 import { useEffect } from 'react';
+import About from './About';
 
 function App() {
   useEffect(()=>{
@@ -40,6 +41,8 @@ function App() {
         <Route path="/Surface/EarthSurface" element={<EarthSurface />} />
 
         <Route path="/SpaceshipEarth" element={<SpaceshipEarth />} />
+
+        <Route path="/aboutus" element={<About/>}></Route>
 
 
       </Routes>

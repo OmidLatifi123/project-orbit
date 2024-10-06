@@ -1,0 +1,67 @@
+/* About.css */
+
+.about-container {
+    background-color: #000; 
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    color: #fff; 
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .glass-effect h1 {
+    margin-bottom: 40px;
+    font-size: 3em;
+  }
+  
+  .images-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  
+  .image-wrapper {
+    text-align: center;
+  }
+  
+  .image-wrapper img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+  }
+  
+  .image-wrapper p {
+    margin-top: 15px;
+    font-size: 1.5em;
+  }
+
+.image-wrapper a {
+    display: block;
+    margin-top: 15px;
+    font-size: 1.5em;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .image-wrapper a:hover {
+    color: #ccc;
+  }
+  
+  
