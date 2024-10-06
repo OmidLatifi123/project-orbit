@@ -13,7 +13,7 @@ function MoonModel({ showLabel }) {
   const moonModel = useLoader(GLTFLoader, '/3D-Objects/moon.glb');
 
 
-  const moonTexture = useLoader(THREE.TextureLoader, '/textures/moon.png');
+  const moonTexture = useLoader(THREE.TextureLoader, '/textures/Moon.png');
 
 
   moonModel.scene.traverse((child) => {
