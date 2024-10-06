@@ -22,7 +22,7 @@ function Chatbot() {
 
     try {
       const response = await axios.post(
-        'http://localhost:3001/mentalHealth',
+        'http://localhost:3001/chat',
         { message: validMessages },
         { headers: { 'Content-Type': 'application/json' } }
       );
