@@ -292,7 +292,7 @@ function TransitionStars({ visible }) {
       depth={100000}    
       count={5000}     
       factor={50000}       
-      saturation={0.5}
+      saturation={0.7}
       fade={true}
       speed={0.2}      
       visible={visible}
