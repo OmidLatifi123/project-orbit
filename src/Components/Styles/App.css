@@ -185,4 +185,10 @@ canvas {
   font-family: 'Montserrat', sans-serif;
   z-index: 999;
 }
+.keplerian-image, .propagator-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
 

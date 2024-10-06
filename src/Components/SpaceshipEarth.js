@@ -6,8 +6,7 @@ import { EffectComposer, Bloom, ChromaticAberration, DepthOfField } from '@react
 import Navbar from './Navbar';
 import './Styles/App.css';
 
-// Earth Model Component
-function EarthModel({ scale = 3000 }) { // Increased the scale to make Earth larger
+function EarthModel({ scale = 3000 }) { 
   const earthRef = useRef();
   const earthTexture = useLoader(THREE.TextureLoader, '/textures/earth.png');
 
@@ -26,17 +25,15 @@ function EarthModel({ scale = 3000 }) { // Increased the scale to make Earth lar
   );
 }
 
-// Satellite Component
 function SatelliteModel({ modelPath, label, orbitRadius, orbitSpeed, scale = 75, inclination, showLabel }) { 
     const satelliteRef = useRef();
     const { scene } = useGLTF(modelPath);
     
-    // Generate a random starting angle for the satellite
     const [startAngle] = useState(() => Math.random() * Math.PI * 2);
 
     useFrame(({ clock }) => {
       const elapsedTime = clock.getElapsedTime();
-      const angle = elapsedTime * orbitSpeed + startAngle; // Add startAngle to the orbit calculation
+      const angle = elapsedTime * orbitSpeed + startAngle; 
       const x = orbitRadius * Math.cos(angle);
       const z = orbitRadius * Math.sin(angle);
   
@@ -67,12 +64,11 @@ function Asteroid({ texture, orbitRadius, orbitSpeed, size = 300, name, showLabe
     const asteroidRef = useRef();
     const asteroidTexture = useLoader(THREE.TextureLoader, texture);
     
-    // Generate a random starting angle for the asteroid
     const [startAngle] = useState(() => Math.random() * Math.PI * 2);
 
     useFrame(({ clock }) => {
       const elapsedTime = clock.getElapsedTime();
-      const angle = elapsedTime * orbitSpeed + startAngle; // Add startAngle to the orbit calculation
+      const angle = elapsedTime * orbitSpeed + startAngle;
       const x = orbitRadius * Math.cos(angle);
       const z = orbitRadius * Math.sin(angle);
   
@@ -100,7 +96,6 @@ function Asteroid({ texture, orbitRadius, orbitSpeed, size = 300, name, showLabe
     );
 }
 
-// Cockpit Model Component
 function CockpitModel({ cameraRef }) {
   const { scene } = useGLTF('/3D-Objects/cockpit1.glb');
   const cockpitRef = useRef();
@@ -125,7 +120,6 @@ function CockpitModel({ cameraRef }) {
   return <primitive ref={cockpitRef} object={scene} scale={[1, 1, 1]} />;
 }
 
-// Free Camera Component
 const FreeCamera = ({ cameraRef, isBoosting, setIsBoosting }) => {
   const { camera, gl } = useThree();
   const [yaw, setYaw] = useState(0);
@@ -285,11 +279,11 @@ function SpaceshipEarth() {
 
         {/* Moon and ICESat */}
         <group position={[400000, 0, 0]}>
-          <MoonModel scale={800} />
+          <MoonModel scale={900} />
           <ICESatModel
-            orbitRadius={20000}
+            orbitRadius={21000}
             orbitSpeed={0.02}
-            scale={500}
+            scale={600}
             showLabel={showLabels}
           />
         </group>
@@ -297,9 +291,9 @@ function SpaceshipEarth() {
         {/* Existing satellites and asteroids */}
         <SatelliteModel
           modelPath="/3D-Objects/Aqua2.glb"
-          orbitRadius={100000}
+          orbitRadius={65000}
           orbitSpeed={0.015}
-          scale={110}
+          scale={130}
           inclination={10}
           label="Aqua Satellite"
           showLabel={showLabels}
@@ -307,9 +301,9 @@ function SpaceshipEarth() {
 
         <SatelliteModel
           modelPath="/3D-Objects/Aura.glb"
-          orbitRadius={110000}
+          orbitRadius={70000}
           orbitSpeed={0.02}
-          scale={100}
+          scale={120}
           inclination={20}
           label="Aura Satellite"
           showLabel={showLabels}
@@ -319,7 +313,7 @@ function SpaceshipEarth() {
           modelPath="/3D-Objects/HubbleSpaceTelescope2.glb"
           orbitRadius={60000}
           orbitSpeed={0.01}
-          scale={20}
+          scale={25}
           inclination={-5}
           label="Hubble Telescope"
           showLabel={showLabels}
@@ -328,7 +322,7 @@ function SpaceshipEarth() {
         <Asteroid
           texture="/textures/Asteroid.png"
           orbitRadius={120000}
-          orbitSpeed={0.03}
+          orbitSpeed={0.01}
           size={300} 
           name="99942 Apophis"
           showLabel={showLabels}
@@ -337,7 +331,7 @@ function SpaceshipEarth() {
         <Asteroid
           texture="/textures/Asteroid1.png"
           orbitRadius={130000}
-          orbitSpeed={0.035}
+          orbitSpeed={0.015}
           size={360}
           name="433 Eros"
           showLabel={showLabels}
@@ -346,7 +340,7 @@ function SpaceshipEarth() {
         <Asteroid
           texture="/textures/Asteroid1.png"
           orbitRadius={150000}
-          orbitSpeed={0.04}
+          orbitSpeed={0.02}
           size={450}
           name="101955 Bennu"
           showLabel={showLabels}
