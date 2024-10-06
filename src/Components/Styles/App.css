@@ -99,7 +99,7 @@ canvas {
 
 .switch-group [role="switch"] {
   background-color: rgba(255, 255, 255, 0.2);
-  padding: 5px 10px; /* Adjust padding for better responsiveness */
+  padding: 5px 10px; 
   border-radius: 20px;
   transition: background-color 0.3s ease;
 }
@@ -122,17 +122,17 @@ canvas {
   }
 
   .switch-group label {
-    font-size: 14px; /* Reduce font size for smaller screens */
+    font-size: 14px; 
   }
 
   .switch-group [role="switch"] {
-    padding: 4px 8px; /* Reduce padding for smaller screens */
+    padding: 4px 8px; 
   }
 
   .overlay-text {
-    bottom: 10px; /* Adjust position */
+    bottom: 10px; 
     left: 10px;
-    font-size: 14px; /* Adjust font size */
+    font-size: 14px; 
   }
 }
 
@@ -145,11 +145,11 @@ canvas {
   }
 
   .switch-group label {
-    font-size: 12px; /* Further reduce font size for extra small screens */
+    font-size: 12px; 
   }
 
   .switch-group [role="switch"] {
-    padding: 3px 6px; /* Smaller padding for tiny screens */
+    padding: 3px 6px; 
   }
 
   .overlay-text {
@@ -160,7 +160,6 @@ canvas {
 }
 
 
-/* Navbar styles remain the same */
 
 .navbar {
   background-color: rgba(51, 51, 51, 0.9);

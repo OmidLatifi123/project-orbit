@@ -48,7 +48,6 @@ function App() {
         <Route path="/saturn" element={<Saturn />} />
         <Route path="/uranus" element={<Uranus />} />
         <Route path="/neptune" element={<Neptune />} />
-        <Route path="/moon" element={<Moon/>}/>
 
         <Route path="/orbitalpropogator" element={<OrbitalPropagator />} />
         
