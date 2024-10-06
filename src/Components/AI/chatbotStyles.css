@@ -1,0 +1,99 @@
+/* Chatbot container with space background */
+.chatbot {
+  width: 300px;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('https://www.transparenttextures.com/patterns/circles.png');
+  z-index: 999;
+}
+
+.space-theme {
+  background: radial-gradient(circle, #1b2735 0%, #090a0f 100%);
+}
+
+/* Chatbox area */
+.chatbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.messages {
+  max-height: 300px;
+  overflow-y: scroll;
+  color: #fff;
+  margin-bottom: 10px;
+  padding-right: 10px;
+}
+
+/* Individual message styles */
+.message {
+  margin-bottom: 10px;
+}
+
+.bot-message {
+  background-color: rgba(144, 202, 249, 0.2);
+  color: #90caf9;
+  padding: 10px;
+  border-radius: 8px;
+  margin-left: auto;
+  box-shadow: 0 0 8px rgba(144, 202, 249, 0.4);
+}
+
+.user-message {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffcc80;
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: auto;
+  box-shadow: 0 0 8px rgba(255, 193, 7, 0.4);
+}
+
+/* Input field styles */
+input[type="text"] {
+  width: 94%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  margin:0 auto;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 16px;
+}
+
+/* Send button styles */
+button {
+  background-color: #7b61ff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #9672ff;
+}
+
+/* Scrollbar custom styling */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(123, 97, 255, 0.5);
+  border-radius: 10px;
+}

@@ -5,6 +5,8 @@ import { OrbitControls, Stars } from '@react-three/drei';
 import * as THREE from 'three';
 import { EffectComposer, Bloom } from '@react-three/postprocessing';
 import Navbar from './Navbar';
+import ChatBot from "./AI/chatbot"
+import VoiceBot from "./AI/voicebot"
 
 import './Styles/App.css';
 
@@ -438,6 +440,8 @@ function GalaxyScene() {
           <label htmlFor="real-spin-speed">Real Spin Speed</label>
         </div>
       </div>
+      <ChatBot/>
+      <VoiceBot/>
     </div>
   );
 }
