@@ -290,8 +290,8 @@ function TransitionStars({ visible }) {
     <Stars
       radius={1000000}  
       depth={100000}    
-      count={10000}     
-      factor={8}       
+      count={5000}     
+      factor={50000}       
       saturation={0.5}
       fade={true}
       speed={0.2}      
