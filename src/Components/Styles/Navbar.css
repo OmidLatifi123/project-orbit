@@ -1,70 +1,113 @@
 .navbar {
-    background-color: rgba(51, 51, 51, 0.5); /* Adjust opacity for better effect */
-    padding: 10px;
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 50px;
-    backdrop-filter: blur(10px); /* Blur effect */
-    -webkit-backdrop-filter: blur(10px); /* Ensure support for WebKit browsers */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgba(51, 51, 51, 0.5); /* Adjust opacity for better effect */
+  padding: 10px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 50px;
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Ensure support for WebKit browsers */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust padding and spacing for mobile */
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allows items to wrap if they don’t fit */
+}
+
+.navbar li {
+  position: relative; /* Position needed for dropdowns */
+  margin: 0 10px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+  transition: color 0.3s ease;
+}
+
+/* On hover, change color */
+.navbar a:hover {
+  color: #ffd700;
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: absolute;
+  top: 100%; /* Places dropdown below the parent li */
+  left: 0;
+  background-color: rgba(51, 51, 51, 0.9);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+/* Dropdown styling */
+.dropdown a {
+  color: white;
+  padding: 5px 0;
+  text-decoration: none;
+}
+
+.dropdown a:hover {
+  color: #ffd700;
+  background-color: rgba(255, 255, 255, 0.1); /* Slight background change on hover */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .navbar {
+      width: 90%; /* Increase width for smaller screens */
+      padding: 10px 5px;
+      top: 10px; /* Adjust top positioning */
   }
-  
+
   .navbar ul {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    justify-content: space-between;
+      flex-direction: column; /* Stack items vertically */
+      align-items: center; /* Center the items */
   }
-  
+
   .navbar li {
-    position: relative; /* Position needed for dropdowns */
-    margin: 0 15px;
+      margin: 10px 0; /* Add margin between vertical items */
   }
-  
+
   .navbar a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 12px;
-    transition: color 0.3s ease;
+      font-size: 14px; /* Slightly larger font for better readability on mobile */
   }
-  
-  .navbar a:hover {
-    color: #ffd700;
-  }
-  
-  /* Dropdown menu */
+
   .dropdown {
-    position: absolute;
-    top: 100%; /* Places dropdown below the parent li */
-    left: 0;
-    background-color: rgba(51, 51, 51, 0.9);
-    border-radius: 10px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 999;
+      width: 100%; /* Adjust width of dropdown for smaller screens */
+      left: 0;
   }
-  
-  .dropdown a {
-    color: white;
-    padding: 5px 0;
-    text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+      width: 100%; /* Full width on extra small screens */
   }
-  
-  .dropdown a:hover {
-    color: #ffd700;
-    background-color: rgba(255, 255, 255, 0.1); /* Slight background change on hover */
+
+  .navbar a {
+      font-size: 12px; /* Slightly smaller font for extra small screens */
   }
-  
-  
+
+  .dropdown {
+      width: 100%; /* Adjust width of dropdown for small screens */
+  }
+}
